@@ -1,3 +1,33 @@
+Optimizations:
+
+
+For the pizza.html
+
+first I inlined the css.
+
+I reduce the background animating pizza from 200 to 6 which seemed enough to fill the page.
+
+I removed the elm.width and .height and replaced it by adjusting the size of the image by its .mover and added will-change: transform; to prepare the browser.
+
+Then I moved the scrollTop outside the loop in the function updatePositions().
+And added the updatePositions function as a parameter to the window.requestAnimationFrame method in the scroll event listener.
+
+I put this:
+items[i].style.left = items[i].basicLeft + 100 * phase + 'px’;
+
+into a variable called left and than passed it into the value in translateX to keep the phasing movement but within a transform which doesn’t trigger paint or layout so now the loop is not using the heavier querySelector and instead is opting for the transform function.
+
+
+To fix the resizing pizza I made some changes to the function changePizzaSizes().
+
+First the for loop was using querySelectorAll too much so I moved them outside the loop. I removed the All on two of them.
+Now the loop is calling the same variable but without having to use querySelector.
+
+In the index.html I first inlined the CSS styles into the head and placed the font url into the styles. I put a meda=“print” in the print.css cuz we don’t need to retrieve it in the browser. And I placed async into the js just before the end of body.
+
+
+
+---------------------------------------------
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
