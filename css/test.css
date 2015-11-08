@@ -1,0 +1,16 @@
+.pizza-sm{
+  will-change: transform;
+  transform: scale(0);
+}
+
+.pizza-m{
+  will-change: transform;
+  transform: scale(1);
+}
+
+.pizza-m{
+  will-change: transform;
+  transform: scale(2);
+
+
+
