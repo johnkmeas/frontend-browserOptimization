@@ -1,13 +1,17 @@
-These are the optimizations that I made:
+# Website optimizations
 
-For index.html:
+Udacity provided a hideous pizza website that needed to be optimized.
+
+## These are the optimizations that I made:
+
+**index.html**
 
 - inlined css and added the @font-face to get the font efficiently.
 - added media="print" to the print.css
 - added  async to "js/perfmatters.js" in script tag before closing body tag
 
 
-For pizza.html:
+**pizza.html**
 - inline css
 - added to the .mover :   
 	will-change:transform;
@@ -15,7 +19,7 @@ For pizza.html:
     backface-visibility: hidden;
 	(to improve paint perfomance)
 
-For main.js:
+**main.js**
 - added "use strict"; to enable strict mode in line 400
 - changed the document.querySelector in the changeSliderLabel() to document.getElementById
 - in changePizzaSizes(), I moved the variables outside of the loop.
@@ -25,10 +29,11 @@ For main.js:
 - reduced generated pizzas to 40 and moved the var elem outside the loop
 - created var movingpizzas = document.getElementById and appended elem to movingPizzas inside of loop.
 
-------------------------
-How to run applications:
+## How to run applications:
 
-- Simply open in a browser
+### Clone repository
+In terminal run `$ git clone https://github.com/johnkmeas/frontend-browserOptimization.git`
 
-- For pizza.html, simple open in browser and scroll down to see the background pizzas move horizontally.
+### Open in browser
+- Open pizza.html in brower and scroll down to see the background pizzas move horizontally.
 - Move slider to see changes in pizzas sizes in the foreground pizzas.
