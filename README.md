@@ -37,3 +37,7 @@ In terminal run `$ git clone https://github.com/johnkmeas/frontend-browserOptimi
 ### Open in browser
 - Open pizza.html in brower and scroll down to see the background pizzas move horizontally.
 - Move slider to see changes in pizzas sizes in the foreground pizzas.
+
+## Skills
+- Understand the browser's critical rendering path
+- Website Optimization
